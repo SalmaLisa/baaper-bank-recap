@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baap er bank - transaction page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <header>
+    <h1 class=" text-2xl lg:text-3xl text-center mt-12">let's make some <br class="block lg:hidden"><span class="lg:text-4xl font-semibold text-indigo-700">Transaction</span>!!!</h1>
+  </header>
+  <main>
+    <section>
+      <div class="grid md:grid-cols-3 gap-4 w-10/12 md:w-3/4 mx-auto text-white mt-14">
+        <!-- small device div start -->
+        <div class="grid grid-cols-2 gap-2 md:hidden">
+          <div class="p-4 rounded-xl bg-violet-400 ">
+            <h2 class=" text-xl font-semibold">Deposite</h2>
+            <h1 class=" text-3xl mt-1">$<span id="deposite-balance">00</span></h1>
+          </div>
+          <div class="p-4 rounded-xl bg-sky-400 ">
+            <h2 class=" text-xl font-semibold">Withdraw</h2>
+            <h1 class=" text-3xl mt-1">$<span id="withdraw-balance">00</span></h1>
+          </div>
+        </div>
+        <!-- small device div end -->
+        <div class="px-8 py-6 rounded-xl bg-violet-400 hidden md:block">
+          <h2 class="text-2xl font-semibold">Deposite</h2>
+          <h1 class="text-4xl mt-2">$<span id="deposite-balance">00</span></h1>
+        </div>
+        <div class="px-8 py-6 rounded-xl bg-sky-400 hidden md:block">
+          <h2 class="text-2xl font-semibold">Withdraw</h2>
+          <h1 class="text-4xl mt-2">$<span id="withdraw-balance">00</span></h1>
+        </div>
+        <div class="px-8 md:py-6 py-4 rounded-xl bg-yellow-400">
+          <h2 class="text-2xl font-semibold">Balance</h2>
+          <h1 class="md:text-4xl text-3xl mt-2">$<span id="total-balance">1000000</span></h1>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="grid md:grid-cols-2 gap-4 w-10/12 md:w-3/4 mx-auto md:mt-14 mt-6">
+        <div class="md:px-8 px-4 py-6 rounded-xl bg-indigo-400">
+          <h2 class="md:text-2xl text-xl font-semibold text-white">Deposite</h2>
+          <input id="deposite-input" type="text" placeholder="$ Amount to deposite" class="w-full lg:py-2 px-3 p-1 rounded-md my-3">
+          <button id="deposite-button" class="bg-violet-800 hover:bg-violet-700 text-white text-sm md:text-base py-2  px-4 md:px-6 font-bold rounded-md md:mt-2">Deposite</button>
+        </div>
+        <div class="md:px-8 px-4 py-6 rounded-xl bg-emerald-400">
+          <h2 class="md:text-2xl text-xl font-semibold text-white">Withdraw</h2>
+          <input id="withdraw-input" type="text" placeholder="$ Amount to withdraw" class="w-full lg:py-2 px-3 p-1 rounded-md my-3 ">
+          <button id="withdraw-button" class="bg-emerald-800 hover:bg-emerald-700 text-white text-sm md:text-base py-2  px-4 md:px-6 font-bold rounded-md md:mt-2">Withdraw</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="js/deposite.js"></script>
+  <script src="js/withdraw.js"></script>
+</body>
+</html>
